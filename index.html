@@ -3,564 +3,308 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ASA Madagascar - Opportunités & Emploi</title>
+
+  <title>ASA Madagascar | Emploi, Formations & Opportunités</title>
+
+  <meta name="description"
+        content="ASA Madagascar : offres d'emploi, formations, stages, bourses et opportunités professionnelles à Madagascar.">
 
   <style>
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f5f9ff;
-  color: #12345b;
-  line-height: 1.6;
-}
-
-/* TOP BAR */
-.topbar {
-  background: #063b7a;
-  color: white;
-  padding: 9px 6%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
-}
-
-/* NAVIGATION */
-nav {
-  background: white;
-  padding: 16px 6%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 3px 15px rgba(0,0,0,.08);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  font-size: 28px;
-  font-weight: 800;
-  color: #0755ad;
-  letter-spacing: .5px;
-}
-
-.logo span {
-  color: #12a9e8;
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.menu a {
-  color: #12345b;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-  transition: .3s;
-}
-
-.menu a:hover {
-  color: #0879d1;
-}
-
-.login {
-  background: #0865d5;
-  color: white !important;
-  padding: 11px 20px;
-  border-radius: 25px;
-}
-
-/* HERO */
-.hero {
-  position: relative;
-  overflow: hidden;
-  min-height: 560px;
-  padding: 90px 6%;
-  color: white;
-  background:
-    radial-gradient(circle at 85% 20%, rgba(255,255,255,.18), transparent 25%),
-    linear-gradient(120deg, #043b82 0%, #0768c9 52%, #08afe8 100%);
-  background-image: url("aacae0bc7039462e79930b13f6e272bf4a3cd421f705704e70de2ab62bac3f4c.png");
-}
-
-.hero::after {
-  content: "🇲🇬";
-  position: absolute;
-  right: 4%;
-  bottom: -60px;
-  font-size: 300px;
-  opacity: .08;
-  transform: rotate(-8deg);
-}
-
-.hero-content {
-  max-width: 1150px;
-  margin: auto;
-  position: relative;
-  z-index: 2;
-}
-
-.hero small {
-  font-size: 14px;
-  letter-spacing: 4px;
-  font-weight: bold;
-}
-
-.hero h1 {
-  font-size: 55px;
-  line-height: 1.08;
-  max-width: 720px;
-  margin: 20px 0;
-}
-
-.hero h1 span {
-  color: #25d7ff;
-}
-
-.hero p {
-  max-width: 650px;
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-/* SEARCH */
-.search-box {
-  max-width: 850px;
-  background: white;
-  padding: 9px;
-  border-radius: 13px;
-  display: flex;
-  gap: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.15);
-}
-
-.search-box input,
-.search-box select {
-  flex: 1;
-  border: none;
-  outline: none;
-  padding: 15px;
-  font-size: 15px;
-  color: #52677f;
-}
-
-.search-btn {
-  border: none;
-  background: #0765d5;
-  color: white;
-  padding: 0 28px;
-  border-radius: 9px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* HERO BUTTONS */
-.hero-buttons {
-  display: flex;
-  gap: 14px;
-  margin: 25px 0;
-  flex-wrap: wrap;
-}
-
-.hero-buttons a {
-  text-decoration: none;
-  padding: 13px 23px;
-  border-radius: 28px;
-  font-weight: bold;
-  transition: .3s;
-}
-
-.btn-primary {
-  background: white;
-  color: #0755ad;
-}
-
-.btn-secondary {
-  color: white;
-  border: 2px solid white;
-}
-
-.hero-buttons a:hover {
-  transform: translateY(-3px);
-}
-
-/* SERVICES */
-.services {
-  max-width: 1200px;
-  margin: -40px auto 60px;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-  position: relative;
-  z-index: 5;
-}
-
-.card {
-  background: white;
-  padding: 27px 21px;
-  border-radius: 14px;
-  box-shadow: 0 7px 25px rgba(0,0,0,.08);
-  transition: .3s;
-}
-
-.card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 12px 30px rgba(0,0,0,.12);
-}
-
-.icon {
-  font-size: 34px;
-  margin-bottom: 12px;
-}
-
-.card h3 {
-  color: #064a9b;
-  margin-bottom: 8px;
-}
-
-.card p {
-  color: #687b91;
-  font-size: 14px;
-}
-
-/* WHY */
-.why {
-  max-width: 1200px;
-  margin: auto;
-  padding: 30px 20px 70px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-}
-
-.section-title {
-  color: #064a9b;
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.why > div > p {
-  color: #65788e;
-}
-
-.advantages {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin-top: 30px;
-}
-
-.advantage {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,.06);
-}
-
-.advantage h4 {
-  color: #064a9b;
-  margin: 7px 0;
-}
-
-/* JOBS */
-.jobs {
-  background: #eaf4ff;
-  padding: 65px 6%;
-}
-
-.jobs-container {
-  max-width: 1100px;
-  margin: auto;
-}
-
-.job {
-  background: white;
-  padding: 20px;
-  margin-top: 15px;
-  border-radius: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 3px 12px rgba(0,0,0,.06);
-}
-
-.job h3 {
-  color: #064a9b;
-}
-
-.job p {
-  color: #718096;
-  font-size: 14px;
-}
-
-.job button {
-  border: none;
-  background: #0764d5;
-  color: white;
-  padding: 10px 19px;
-  border-radius: 22px;
-  cursor: pointer;
-}
-
-/* CTA */
-.cta {
-  background: linear-gradient(120deg, #043b82, #0878d1);
-  color: white;
-  text-align: center;
-  padding: 65px 20px;
-}
-
-.cta h2 {
-  font-size: 34px;
-  margin-bottom: 12px;
-}
-
-.cta p {
-  margin-bottom: 25px;
-}
-
-.cta a {
-  display: inline-block;
-  background: white;
-  color: #064a9b;
-  padding: 13px 26px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* FOOTER */
-footer {
-  background: #062c58;
-  color: white;
-  text-align: center;
-  padding: 45px 20px;
-}
-
-footer p {
-  color: #c8d8eb;
-  margin-top: 8px;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-
-  .topbar {
-    display: none;
-  }
-
-  nav {
-    padding: 15px 20px;
-  }
-
-  .menu {
-    display: none;
-  }
-
-  .hero {
-    padding: 60px 20px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  .search-box {
-    flex-direction: column;
-  }
-
-  .search-btn {
-    padding: 15px;
-  }
-
-  .services {
-    grid-template-columns: 1fr 1fr;
-    margin-top: 25px;
-  }
-
-  .why {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 550px) {
-
-  .services {
-    grid-template-columns: 1fr;
-  }
-
-  .advantages {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .job {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-}
-
-    body {
-      background: #f5f8fc;
-      color: #12345b;
+    :root {
+      --blue: #075fcf;
+      --dark-blue: #063b7a;
+      --cyan: #12a9e8;
+      --text: #12345b;
+      --muted: #64748b;
+      --light: #f5f9ff;
+      --white: #ffffff;
     }
 
-    /* TOP BAR */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
     .topbar {
-      background: #064a9b;
+      background: var(--dark-blue);
       color: white;
-      padding: 10px 6%;
+      padding: 9px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 20px;
       font-size: 14px;
     }
 
-    /* NAVIGATION */
+    /* =========================
+       NAVIGATION
+    ========================= */
+
     nav {
-      background: white;
-      padding: 15px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    }
+
+    .nav-container {
+      max-width: 1250px;
+      margin: auto;
+      padding: 15px 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
     }
 
     .logo {
-      font-size: 28px;
-      font-weight: bold;
-      color: #0755ad;
+      text-decoration: none;
+      font-size: 27px;
+      font-weight: 800;
+      color: var(--blue);
+      white-space: nowrap;
     }
 
     .logo span {
-      color: #12a8e8;
+      color: var(--cyan);
     }
 
     .menu {
       display: flex;
-      gap: 25px;
       align-items: center;
+      gap: 22px;
     }
 
     .menu a {
       text-decoration: none;
-      color: #12345b;
-      font-weight: bold;
       font-size: 15px;
+      font-weight: 700;
+      transition: 0.2s;
     }
 
     .menu a:hover {
-      color: #0875d1;
+      color: var(--blue);
     }
 
     .login {
-      background: #075fd0;
+      background: var(--blue);
       color: white !important;
-      padding: 11px 20px;
+      padding: 10px 18px;
       border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 85% 20%, rgba(255,255,255,.18), transparent 25%),
-    linear-gradient(120deg, #043b82 0%, #075fc4 50%, #08a9e8 100%);
-  color: white;
-  padding: 90px 6%;
-  min-height: 540px;
-}
+      min-height: 650px;
 
-.hero::after {
-  content: "🇲🇬";
-  position: absolute;
-  right: 5%;
-  bottom: -55px;
-  font-size: 300px;
-  opacity: .08;
-  transform: rotate(-8deg);
-}
-
-.hero-content {
-  max-width: 1150px;
-  margin: auto;
-  position: relative;
-  z-index: 2;
-}
-
-    /* SEARCH */
-    .search-box {
-      background: white;
-      padding: 10px;
-      border-radius: 12px;
-      max-width: 850px;
       display: flex;
-      gap: 10px;
+      align-items: center;
+
+      position: relative;
+      overflow: hidden;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(4,59,130,0.88) 0%,
+          rgba(7,95,196,0.58) 48%,
+          rgba(8,169,232,0.18) 100%
+        ),
+        url("hero-asa-madagascar.png")
+        center/cover
+        no-repeat;
+    }
+
+    .hero-content {
+      width: min(1200px, 92%);
+      margin: auto;
+
+      padding: 90px 0 130px;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      letter-spacing: 5px;
+      font-weight: 800;
+    }
+
+    .hero h1 {
+      max-width: 700px;
+
+      margin: 18px 0;
+
+      font-size: clamp(42px, 5vw, 64px);
+      line-height: 1.05;
+    }
+
+    .hero h1 span {
+      color: #27d8ff;
+    }
+
+    .hero p {
+      max-width: 650px;
+
+      margin-bottom: 28px;
+
+      font-size: 18px;
+    }
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    .search-box {
+      max-width: 850px;
+
+      background: white;
+
+      padding: 8px;
+
+      border-radius: 14px;
+
+      display: flex;
+      gap: 8px;
+
+      box-shadow: 0 12px 35px rgba(0,0,0,0.18);
     }
 
     .search-box input,
     .search-box select {
-      border: none;
-      outline: none;
-      padding: 15px;
+      min-width: 0;
+
       flex: 1;
+
+      border: 0;
+      outline: 0;
+
+      padding: 15px;
+
       font-size: 15px;
-      color: #555;
+
+      color: #52677f;
     }
 
     .search-btn {
-      background: #0764d5;
+      border: 0;
+
+      background: var(--blue);
+
       color: white;
-      border: none;
-      padding: 0 28px;
-      border-radius: 8px;
-      font-weight: bold;
+
+      padding: 0 26px;
+
+      border-radius: 10px;
+
+      font-weight: 800;
+
       cursor: pointer;
     }
 
-    /* SERVICES */
+    /* =========================
+       HERO BUTTONS
+    ========================= */
+
+    .hero-buttons {
+      display: flex;
+
+      gap: 12px;
+
+      flex-wrap: wrap;
+
+      margin-top: 22px;
+    }
+
+    .hero-buttons a {
+      text-decoration: none;
+
+      padding: 12px 22px;
+
+      border-radius: 28px;
+
+      font-weight: 800;
+
+      transition: 0.2s;
+    }
+
+    .hero-buttons a:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: white;
+
+      color: var(--blue);
+    }
+
+    .btn-secondary {
+      border: 2px solid white;
+
+      color: white;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
     .services {
       max-width: 1200px;
-      margin: -35px auto 50px;
+
+      margin: -55px auto 70px;
+
       padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
+
       position: relative;
+      z-index: 5;
+
+      display: grid;
+
+      grid-template-columns: repeat(5,1fr);
+
+      gap: 16px;
     }
 
     .card {
       background: white;
-      padding: 25px 20px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      transition: 0.3s;
+
+      padding: 24px 20px;
+
+      border-radius: 15px;
+
+      box-shadow: 0 10px 30px rgba(7,61,122,0.10);
+
+      transition: 0.25s;
     }
 
     .card:hover {
@@ -569,166 +313,252 @@ footer p {
 
     .icon {
       font-size: 32px;
-      margin-bottom: 15px;
+
+      margin-bottom: 10px;
     }
 
     .card h3 {
       color: #064a9b;
-      margin-bottom: 10px;
+
+      margin-bottom: 7px;
+
+      font-size: 18px;
     }
 
     .card p {
+      color: var(--muted);
+
       font-size: 14px;
-      line-height: 1.5;
-      color: #61728a;
     }
 
-    /* WHY US */
-    .why {
+    /* =========================
+       GENERAL SECTION
+    ========================= */
+
+    .section {
       max-width: 1200px;
+
       margin: auto;
-      padding: 50px 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
+
+      padding: 20px 20px 80px;
     }
 
     .section-title {
       color: #064a9b;
+
       font-size: 32px;
-      margin-bottom: 15px;
+
+      margin-bottom: 10px;
     }
 
-    .why p {
-      line-height: 1.7;
-      color: #61728a;
+    .section-intro {
+      color: var(--muted);
+
+      margin-bottom: 28px;
     }
+
+    /* =========================
+       JOBS
+    ========================= */
+
+    .jobs {
+      background: #eaf4ff;
+
+      padding: 70px 0;
+    }
+
+    .job-list {
+      display: grid;
+
+      gap: 14px;
+    }
+
+    .job {
+      background: white;
+
+      padding: 20px;
+
+      border-radius: 13px;
+
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .job h3 {
+      color: #064a9b;
+
+      margin-bottom: 5px;
+    }
+
+    .job p {
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+    .job a {
+      flex-shrink: 0;
+
+      text-decoration: none;
+
+      background: var(--blue);
+
+      color: white;
+
+      padding: 10px 18px;
+
+      border-radius: 22px;
+
+      font-weight: 700;
+    }
+
+    /* =========================
+       ADVANTAGES
+    ========================= */
 
     .advantages {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+
+      grid-template-columns: repeat(4,1fr);
+
+      gap: 18px;
+
       margin-top: 30px;
     }
 
     .advantage {
       background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+
+      padding: 22px;
+
+      border-radius: 13px;
+
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
     }
 
     .advantage h4 {
-      margin: 10px 0;
       color: #064a9b;
+
+      margin: 8px 0;
     }
 
-    /* JOBS */
-    .jobs {
-      background: #eaf4ff;
-      padding: 60px 6%;
-    }
+    .advantage p {
+      color: var(--muted);
 
-    .jobs-container {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .job {
-      background: white;
-      padding: 20px;
-      margin-top: 15px;
-      border-radius: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-    }
-
-    .job h3 {
-      color: #064a9b;
-      margin-bottom: 7px;
-    }
-
-    .job p {
-      color: #718096;
       font-size: 14px;
     }
 
-    .job button {
-      border: none;
-      background: #0764d5;
-      color: white;
-      padding: 10px 18px;
-      border-radius: 20px;
-      cursor: pointer;
-    }
+    /* =========================
+       CTA
+    ========================= */
 
-    /* CTA */
     .cta {
-      background: #064a9b;
+      background:
+        linear-gradient(
+          120deg,
+          #043b82,
+          #0878d1
+        );
+
       color: white;
+
       text-align: center;
-      padding: 60px 20px;
+
+      padding: 70px 20px;
     }
 
     .cta h2 {
       font-size: 34px;
-      margin-bottom: 15px;
+
+      margin-bottom: 10px;
     }
 
     .cta p {
-      margin-bottom: 25px;
+      margin-bottom: 24px;
     }
 
     .cta a {
       display: inline-block;
+
       background: white;
+
       color: #064a9b;
+
       padding: 13px 25px;
+
       border-radius: 25px;
+
       text-decoration: none;
-      font-weight: bold;
+
+      font-weight: 800;
     }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
       background: #062c58;
-      color: white;
-      padding: 40px 6%;
-      text-align: center;
-    }
 
-    footer h2 {
-      margin-bottom: 10px;
+      color: white;
+
+      text-align: center;
+
+      padding: 42px 20px;
     }
 
     footer p {
       color: #c8d8eb;
-      margin: 8px;
+
+      margin-top: 8px;
     }
 
-    /* MOBILE */
-    @media (max-width: 900px) {
+    /* =========================
+       TABLET
+    ========================= */
 
-      .topbar {
-        display: none;
+    @media (max-width:1000px) {
+
+      .services {
+        grid-template-columns: repeat(3,1fr);
       }
 
-      nav {
-        padding: 15px 20px;
+      .advantages {
+        grid-template-columns: repeat(2,1fr);
       }
 
       .menu {
         display: none;
       }
+    }
 
-      .hero {
-        padding: 55px 20px;
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width:650px) {
+
+      .topbar {
+        display: none;
       }
 
-      .hero h1 {
-        font-size: 38px;
+      .hero {
+        min-height: 600px;
+      }
+
+      .hero-content {
+        padding: 70px 0 110px;
+      }
+
+      .hero p {
+        font-size: 16px;
       }
 
       .search-box {
@@ -736,36 +566,33 @@ footer p {
       }
 
       .search-btn {
-        padding: 15px;
+        padding: 14px;
       }
 
       .services {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+
         margin-top: 25px;
-      }
-
-      .why {
-        grid-template-columns: 1fr;
-      }
-
-      .job {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-      }
-    }
-
-    @media (max-width: 550px) {
-      .services {
-        grid-template-columns: 1fr;
       }
 
       .advantages {
         grid-template-columns: 1fr;
       }
 
+      .job {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+      .job a {
+        width: 100%;
+
+        text-align: center;
+      }
+
       .hero h1 {
-        font-size: 32px;
+        font-size: 40px;
       }
     }
   </style>
@@ -773,212 +600,610 @@ footer p {
 
 <body>
 
-  <!-- TOP BAR -->
-  <div class="topbar">
-    <div>📍 Madagascar</div>
-    <div>✉️ contact@asa-madagascar.mg</div>
-    <div>🕐 Lun - Ven : 8h - 17h</div>
-  </div>
+<!-- =========================
+     TOP BAR
+========================= -->
 
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="logo">
-      ASA <span>MADAGASCAR</span>
-    </div>
+<div class="topbar">
+  <div>📍 Madagascar</div>
 
-    <div class="menu">
-      <a href="#">Accueil</a>
-      <a href="#emploi">Offres d'emploi</a>
-      <a href="#formations">Formations</a>
-      <a href="#opportunites">Opportunités</a>
-      <a href="#actualites">Actualités</a>
-      <a href="#contact">Contact</a>
-      <a href="#" class="login">Se connecter</a>
-    </div>
-  </nav>
+  <div>✉️ contact@asa-madagascar.mg</div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-
-      <small>ASA MADAGASCAR</small>
-
-      <h1>
-  Votre passerelle vers
-  <span>un meilleur avenir</span>
-</h1>
-
-<div class="hero-buttons">
-  <a href="#emploi" class="btn-primary">Découvrir les offres →</a>
-  <a href="#formations" class="btn-secondary">Voir les formations</a>
+  <div>🕐 Lun - Ven : 8h - 17h</div>
 </div>
 
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+  <div class="nav-container">
+
+    <a href="index.html" class="logo">
+      ASA <span>MADAGASCAR</span>
+    </a>
+
+    <div class="menu">
+
+      <a href="index.html">
+        Accueil
+      </a>
+
+      <a href="#emploi">
+        Offres d'emploi
+      </a>
+
+      <a href="#formations">
+        Formations
+      </a>
+
+      <a href="#opportunites">
+        Opportunités
+      </a>
+
+      <a href="#actualites">
+        Actualités
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </div>
+
+    <a href="#" class="login">
+      Se connecter
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      ASA MADAGASCAR
+    </div>
+
+    <h1>
+      Votre passerelle vers
+      <span>un meilleur avenir</span>
+    </h1>
+
+    <p>
+      Découvrez les opportunités d'emploi,
+      les formations et les informations utiles
+      qui vous rapprochent de vos objectifs
+      professionnels à Madagascar.
+    </p>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Quel poste recherchez-vous ?"
+      >
+
+      <select id="regionSelect">
+
+        <option value="">
+          Toutes les régions
+        </option>
+
+        <option>
+          Antananarivo
+        </option>
+
+        <option>
+          Toamasina
+        </option>
+
+        <option>
+          Fianarantsoa
+        </option>
+
+        <option>
+          Mahajanga
+        </option>
+
+        <option>
+          Antsiranana
+        </option>
+
+        <option>
+          Toliara
+        </option>
+
+      </select>
+
+      <button
+        class="search-btn"
+        type="button"
+        onclick="searchJobs()"
+      >
+        🔍 Rechercher
+      </button>
+
+    </div>
+
+
+    <!-- BUTTONS -->
+
+    <div class="hero-buttons">
+
+      <a
+        href="#emploi"
+        class="btn-primary"
+      >
+        Découvrir les offres →
+      </a>
+
+      <a
+        href="#formations"
+        class="btn-secondary"
+      >
+        Voir les formations
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services">
+
+  <div class="card">
+
+    <div class="icon">
+      💼
+    </div>
+
+    <h3>
+      Offres d'emploi
+    </h3>
+
+    <p>
+      Trouvez le poste qui correspond
+      à votre profil et à vos ambitions.
+    </p>
+
+  </div>
+
+
+  <div
+    class="card"
+    id="formations"
+  >
+
+    <div class="icon">
+      🎓
+    </div>
+
+    <h3>
+      Formations
+    </h3>
+
+    <p>
+      Développez vos compétences
+      et préparez votre avenir professionnel.
+    </p>
+
+  </div>
+
+
+  <div
+    class="card"
+    id="opportunites"
+  >
+
+    <div class="icon">
+      🚀
+    </div>
+
+    <h3>
+      Opportunités
+    </h3>
+
+    <p>
+      Stages, bourses, concours,
+      projets et autres opportunités.
+    </p>
+
+  </div>
+
+
+  <div
+    class="card"
+    id="actualites"
+  >
+
+    <div class="icon">
+      📰
+    </div>
+
+    <h3>
+      Actualités
+    </h3>
+
+    <p>
+      Restez informé des informations
+      utiles à Madagascar.
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="icon">
+      👥
+    </div>
+
+    <h3>
+      À propos
+    </h3>
+
+    <p>
+      Découvrez la mission et les objectifs
+      d'ASA Madagascar.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     JOBS
+========================= -->
+
+<section
+  class="jobs"
+  id="emploi"
+>
+
+  <div class="section">
+
+    <h2 class="section-title">
+      Dernières offres d'emploi
+    </h2>
+
+    <p class="section-intro">
+      Retrouvez les opportunités actuellement
+      présentées sur ASA Madagascar.
+    </p>
+
+
+    <div
+      class="job-list"
+      id="jobList"
+    >
+
+
+      <!-- JOB 1 -->
+
+      <article
+        class="job"
+        data-title="Assistant Comptable"
+        data-region="Toamasina"
+      >
+
+        <div>
+
+          <h3>
+            Assistant Comptable (H/F)
+          </h3>
+
+          <p>
+            SPAT • Toamasina
+          </p>
+
+        </div>
+
+        <a href="job.html">
+          Voir l'offre →
+        </a>
+
+      </article>
+
+
+      <!-- JOB 2 -->
+
+      <article
+        class="job"
+        data-title="Agent de Crédit"
+        data-region="Antananarivo"
+      >
+
+        <div>
+
+          <h3>
+            Agent de Crédit (H/F)
+          </h3>
+
+          <p>
+            Antananarivo
+          </p>
+
+        </div>
+
+        <a href="job.html">
+          Voir l'offre →
+        </a>
+
+      </article>
+
+
+      <!-- JOB 3 -->
+
+      <article
+        class="job"
+        data-title="Chargé de Projet"
+        data-region="Antananarivo"
+      >
+
+        <div>
+
+          <h3>
+            Chargé de Projet (H/F)
+          </h3>
+
+          <p>
+            Antananarivo
+          </p>
+
+        </div>
+
+        <a href="job.html">
+          Voir l'offre →
+        </a>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     WHY ASA
+========================= -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    Pourquoi choisir ASA Madagascar ?
+  </h2>
+
+  <p class="section-intro">
+    Une plateforme pensée pour rapprocher
+    les candidats des bonnes opportunités.
+  </p>
+
+
+  <div class="advantages">
+
+
+    <div class="advantage">
+
+      <div>🛡️</div>
+
+      <h4>
+        Fiable
+      </h4>
+
       <p>
-        Découvrez les opportunités d'emploi, les formations et
-        les services qui vous rapprochent de vos objectifs
-        professionnels à Madagascar.
+        Des informations présentées
+        de manière claire et organisée.
       </p>
 
-      <div class="search-box">
-        <input type="text" placeholder="Quel poste recherchez-vous ?">
-
-        <select>
-          <option>Toutes les régions</option>
-          <option>Antananarivo</option>
-          <option>Toamasina</option>
-          <option>Fianarantsoa</option>
-          <option>Mahajanga</option>
-          <option>Antsiranana</option>
-          <option>Toliara</option>
-        </select>
-
-        <button class="search-btn">
-          🔍 Rechercher
-        </button>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="services">
-
-    <div class="card">
-      <div class="icon">💼</div>
-      <h3>Offres d'emploi</h3>
-      <p>Trouvez le poste qui correspond à votre profil et à vos ambitions.</p>
     </div>
 
-    <div class="card" id="formations">
-      <div class="icon">🎓</div>
-      <h3>Formations</h3>
-      <p>Développez vos compétences et boostez votre carrière.</p>
-    </div>
 
-    <div class="card" id="opportunites">
-      <div class="icon">🚀</div>
-      <h3>Opportunités</h3>
-      <p>Stages, bourses, projets et autres opportunités.</p>
-    </div>
+    <div class="advantage">
 
-    <div class="card" id="actualites">
-      <div class="icon">📰</div>
-      <h3>Actualités</h3>
-      <p>Restez informé des dernières nouvelles et tendances.</p>
-    </div>
+      <div>📱</div>
 
-    <div class="card">
-      <div class="icon">👥</div>
-      <h3>À propos</h3>
-      <p>Découvrez notre mission, notre équipe et nos valeurs.</p>
-    </div>
-
-  </section>
-
-  <!-- WHY ASA -->
-  <section class="why">
-
-    <div>
-      <h2 class="section-title">
-        Pourquoi choisir ASA Madagascar ?
-      </h2>
+      <h4>
+        Accessible
+      </h4>
 
       <p>
-        Nous connectons les talents aux opportunités et
-        accompagnons votre réussite professionnelle à chaque étape.
+        Une plateforme simple à consulter
+        sur ordinateur et mobile.
       </p>
 
-      <div class="advantages">
-
-        <div class="advantage">
-          <div>🛡️</div>
-          <h4>Fiable</h4>
-          <p>Des informations vérifiées et fiables.</p>
-        </div>
-
-        <div class="advantage">
-          <div>👥</div>
-          <h4>Accessible</h4>
-          <p>Une plateforme simple et intuitive.</p>
-        </div>
-
-        <div class="advantage">
-          <div>🇲🇬</div>
-          <h4>100% Madagascar</h4>
-          <p>Pour soutenir le développement local.</p>
-        </div>
-
-        <div class="advantage">
-          <div>💡</div>
-          <h4>Accompagnement</h4>
-          <p>Conseils et soutien tout au long du parcours.</p>
-        </div>
-
-      </div>
     </div>
 
-    <!-- JOBS -->
-    <div id="emploi">
 
-      <h2 class="section-title">
-        Dernières offres d'emploi
-      </h2>
+    <div class="advantage">
 
-      <div class="job">
-        <div>
-          <h3>Assistant Comptable (H/F)</h3>
-          <p>SPAT • Toamasina</p>
-        </div>
-        <button>Voir l'offre</button>
-      </div>
+      <div>🇲🇬</div>
 
-      <div class="job">
-        <div>
-          <h3>Agent de Crédit (H/F)</h3>
-          <p>Antananarivo</p>
-        </div>
-        <button>Voir l'offre</button>
-      </div>
+      <h4>
+        100% Madagascar
+      </h4>
 
-      <div class="job">
-        <div>
-          <h3>Chargé de Projet (H/F)</h3>
-          <p>Antananarivo</p>
-        </div>
-        <button>Voir l'offre</button>
-      </div>
+      <p>
+        Des contenus centrés sur les
+        opportunités disponibles à Madagascar.
+      </p>
 
     </div>
 
-  </section>
 
-  <!-- CTA -->
-  <section class="cta">
+    <div class="advantage">
 
-    <h2>Construisez votre avenir avec ASA Madagascar</h2>
+      <div>💡</div>
 
-    <p>
-      Découvrez dès maintenant les opportunités disponibles.
-    </p>
+      <h4>
+        Conseils utiles
+      </h4>
 
-    <a href="#emploi">Découvrir les offres</a>
+      <p>
+        Des conseils pour améliorer
+        votre recherche d'emploi et votre carrière.
+      </p>
 
-  </section>
+    </div>
 
-  <!-- FOOTER -->
-  <footer id="contact">
 
-    <h2>ASA MADAGASCAR 🇲🇬</h2>
+  </div>
 
-    <p>
-      Votre plateforme dédiée aux opportunités professionnelles à Madagascar.
-    </p>
+</section>
 
-    <p>
-      © 2026 ASA Madagascar - Tous droits réservés.
-    </p>
 
-  </footer>
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+  <h2>
+    Construisez votre avenir
+    avec ASA Madagascar
+  </h2>
+
+  <p>
+    Découvrez dès maintenant
+    les opportunités disponibles.
+  </p>
+
+  <a href="#emploi">
+    Découvrir les offres
+  </a>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer id="contact">
+
+  <h2>
+    ASA MADAGASCAR 🇲🇬
+  </h2>
+
+  <p>
+    Votre plateforme dédiée aux opportunités
+    professionnelles à Madagascar.
+  </p>
+
+  <p>
+    © 2026 ASA Madagascar -
+    Tous droits réservés.
+  </p>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+function searchJobs() {
+
+  const keyword =
+    document
+      .getElementById("searchInput")
+      .value
+      .toLowerCase()
+      .trim();
+
+  const region =
+    document
+      .getElementById("regionSelect")
+      .value
+      .toLowerCase()
+      .trim();
+
+
+  const jobs =
+    document.querySelectorAll(
+      "#jobList .job"
+    );
+
+
+  jobs.forEach(function(job) {
+
+    const title =
+      job.dataset.title
+      .toLowerCase();
+
+    const jobRegion =
+      job.dataset.region
+      .toLowerCase();
+
+
+    const matchesKeyword =
+      !keyword ||
+      title.includes(keyword);
+
+
+    const matchesRegion =
+      !region ||
+      jobRegion === region;
+
+
+    if (
+      matchesKeyword &&
+      matchesRegion
+    ) {
+
+      job.style.display = "flex";
+
+    } else {
+
+      job.style.display = "none";
+
+    }
+
+  });
+
+
+  document
+    .getElementById("emploi")
+    .scrollIntoView({
+      behavior: "smooth"
+    });
+
+}
+
+</script>
 
 </body>
 </html>
